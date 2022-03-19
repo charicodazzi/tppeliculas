@@ -3,7 +3,8 @@ import List from "./List";
 const Home = () => {
   return (
     <div>
-      <List />
+      <List titulo="peliculas populares" url="popular" />
+      <List titulo="peliculas mejor puntuadas" url="top_rated" />
     </div>
   );
 };
