@@ -1,7 +1,9 @@
+import List from "./List";
+
 const Home = () => {
   return (
     <div>
-      <h2>Acá va el Home</h2>
+      <List />
     </div>
   );
 };
