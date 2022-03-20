@@ -1,4 +1,5 @@
 import List from "./List";
+import PeliculaItem from "./PeliculaItem";
 
 const Home = () => {
   return (

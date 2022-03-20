@@ -1,5 +1,6 @@
 import { URLBASE, APIkey } from "./FuncionesAuxiliares";
 import { useState, useEffect } from "react";
+import PeliculaItem from "./PeliculaItem";
 
 const List = ({ titulo, url }) => {
   const [movies, setMovies] = useState([]);
@@ -14,7 +15,11 @@ const List = ({ titulo, url }) => {
     <div>
       <h1>{titulo}</h1>
       {movies.map((movie) => (
-        <span>{movie.title}</span>
+        <PeliculaItem
+          titulo={movie.title}
+          imagen={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+          link={`/{${movie.id}`}
+        />
       ))}
     </div>
   );
