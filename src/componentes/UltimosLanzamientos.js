@@ -1,8 +1,11 @@
+import PresentacionPeliculas from "./PresentacionPeliculas";
+
 const UltimosLanzamientos = () => {
   return (
-    <div>
-      <h2>Acá va el Ultimos Lanzamientos</h2>
-    </div>
+    <PresentacionPeliculas
+      titulo="Ultimos lanzamientos"
+      peliculas={["ultimos 1", "ultimos 2", "ultimos  3"]}
+    />
   );
 };
 
