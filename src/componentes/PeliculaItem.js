@@ -1,12 +1,18 @@
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import AddIcon from "@mui/icons-material/Add";
+
 const PeliculaItem = ({ titulo, imagen, link }) => {
   return (
-    <div className="pelicula-item">
-      <img className="pelicula-item-imagen" src={imagen} />
+    <Box className="pelicula-item">
+      <Avatar className="pelicula-item-imagen" src={imagen} sx={{ mt: 1 }} />
       <p>{titulo}</p>
       <a href={link}>
-        <span>{"<"}</span>
+        <span>
+          <AddIcon color="secondary"></AddIcon>
+        </span>
       </a>
-    </div>
+    </Box>
   );
 };
 
