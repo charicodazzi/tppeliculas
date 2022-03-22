@@ -11,7 +11,11 @@ const Populares = () => {
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <PresentacionPeliculas titulo="Peliculas Populares" peliculas={movies} />
+    <PresentacionPeliculas
+      titulo="Peliculas Populares"
+      peliculas={movies}
+      imagen={`https://image.tmdb.org/t/p/w300/${movies.poster_path}`}
+    />
   );
 };
 
