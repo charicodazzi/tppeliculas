@@ -11,11 +11,7 @@ const UltimosLanzamientos = () => {
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <PresentacionPeliculas
-      titulo="Ultimos lanzamientos"
-      peliculas={movies}
-      imagen={`https://image.tmdb.org/t/p/w300/${movies.poster_path}`}
-    />
+    <PresentacionPeliculas titulo="Ultimos lanzamientos" peliculas={movies} />
   );
 };
 

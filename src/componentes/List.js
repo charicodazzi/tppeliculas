@@ -16,8 +16,9 @@ const List = ({ titulo, url }) => {
       <h1>{titulo}</h1>
       {movies.map((movie) => (
         <PeliculaItem
+          key={movie.id}
           titulo={movie.title}
-          imagen={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+          imagen={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
           link={`/{${movie.id}`}
         />
       ))}
