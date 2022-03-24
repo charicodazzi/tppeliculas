@@ -1,6 +1,7 @@
 import PresentacionPeliculas from "./PresentacionPeliculas";
 import { useEffect, useState } from "react";
 import { URLBASE, APIkey } from "./FuncionesAuxiliares";
+import Box from "@mui/material/Box";
 
 const UltimosLanzamientos = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +12,13 @@ const UltimosLanzamientos = () => {
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <PresentacionPeliculas titulo="Ultimos lanzamientos" peliculas={movies} />
+    <Box
+      sx={{
+        bgcolor: "rgba(27,40,54,1.00)",
+      }}
+    >
+      <PresentacionPeliculas titulo="Ultimos lanzamientos" peliculas={movies} />
+    </Box>
   );
 };
 

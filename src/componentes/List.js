@@ -1,6 +1,7 @@
 import { URLBASE, APIkey } from "./FuncionesAuxiliares";
 import { useState, useEffect } from "react";
 import PeliculaItem from "./PeliculaItem";
+import { Box } from "@mui/material";
 
 const List = ({ titulo, url }) => {
   const [movies, setMovies] = useState([]);
@@ -13,7 +14,11 @@ const List = ({ titulo, url }) => {
 
   return (
     <div>
-      <h1>{titulo}</h1>
+      <Box
+        sx={{ display: "flex", justifyContent: "center", mb: 6, fontSize: 24 }}
+      >
+        {titulo}
+      </Box>
       {movies.map((movie) => (
         <PeliculaItem
           key={movie.id}

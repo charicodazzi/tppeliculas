@@ -1,6 +1,7 @@
 import PresentacionPeliculas from "./PresentacionPeliculas";
 import { useEffect, useState } from "react";
 import { URLBASE, APIkey } from "./FuncionesAuxiliares";
+import Box from "@mui/material/Box";
 
 const Populares = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +12,9 @@ const Populares = () => {
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <PresentacionPeliculas titulo="Peliculas Populares" peliculas={movies} />
+    <Box sx={{ bgcolor: "rgba(27,40,54,1.00)" }}>
+      <PresentacionPeliculas titulo="Peliculas Populares" peliculas={movies} />
+    </Box>
   );
 };
 
