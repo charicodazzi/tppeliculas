@@ -7,7 +7,7 @@ const Carrousel = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(`${URLBASE}now_playing?api_key=${APIkey}`)
+    fetch(`${URLBASE}now_playing?api_key=${APIkey}&language=es`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
   }, []);

@@ -7,12 +7,16 @@ const Populares = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(`${URLBASE}popular?api_key=${APIkey}`)
+    fetch(`${URLBASE}popular?api_key=${APIkey}&language=es`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <Box sx={{ bgcolor: "rgba(27,40,54,1.00)" }}>
+    <Box
+      sx={{
+        bgcolor: "rgba(27,40,54,1.00)",
+      }}
+    >
       <PresentacionPeliculas titulo="Peliculas Populares" peliculas={movies} />
     </Box>
   );

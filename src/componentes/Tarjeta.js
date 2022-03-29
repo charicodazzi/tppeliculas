@@ -8,7 +8,16 @@ import IconButton from "@mui/material/IconButton";
 
 const Tarjeta = ({ imagen, titulo }) => {
   return (
-    <Card sx={{ width: 250, height: 450 }}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        width: 250,
+        height: 450,
+        m: 4,
+      }}
+    >
       <CardMedia
         component="img"
         height="300"

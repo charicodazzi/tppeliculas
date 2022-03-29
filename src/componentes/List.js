@@ -7,7 +7,7 @@ const List = ({ titulo, url }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch(`${URLBASE}${url}?api_key=${APIkey}`)
+    fetch(`${URLBASE}${url}?api_key=${APIkey}&language=es`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
   }, []);
@@ -15,10 +15,17 @@ const List = ({ titulo, url }) => {
   return (
     <div>
       <Box
-        sx={{ display: "flex", justifyContent: "center", mb: 6, fontSize: 24 }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          mb: 6,
+          fontSize: 24,
+        }}
       >
-        {titulo}
+        {" "}
       </Box>
+      {titulo}
+
       {movies.map((movie) => (
         <PeliculaItem
           key={movie.id}

@@ -10,7 +10,10 @@ const Footer = () => {
         fontSize: 22,
       }}
     >
-      <a href="https://www.linkedin.com/in/carla-codazzi/">
+      <a
+        style={{ textDecoration: "none", color: "white" }}
+        href="https://www.linkedin.com/in/carla-codazzi/ "
+      >
         Visita mi Linkedin
       </a>
     </Box>
