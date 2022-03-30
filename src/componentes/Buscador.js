@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { APIkey } from "./FuncionesAuxiliares";
 import Tarjeta from "./Tarjeta";
+import Box from "@mui/material/Box";
 
 const Buscador = () => {
   const [movies, setMovies] = useState([]);
@@ -23,22 +24,32 @@ const Buscador = () => {
     setSearchParams({ query: e.target.value });
   };
   return (
-    <div>
-      <h2>Search</h2>
+    <Box
+      sx={{
+        bgcolor: "rgba(27,40,54,1.00)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        p: 5,
+      }}
+    >
+      <Box sx={{ color: "white", fontSize: 24 }}>Busca tu película</Box>
       <input
         type="text"
         onChange={handleChange}
         value={searchParams.get("query")}
+        style={{ width: 500 }}
       ></input>
-
-      {movies &&
-        movies.map((movie) => (
-          <Tarjeta
-            titulo={movie.title}
-            imagen={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-          />
-        ))}
-    </div>
+      <Box sx={{ display: "flex" }}>
+        {movies &&
+          movies.map((movie) => (
+            <Tarjeta
+              titulo={movie.title}
+              imagen={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+            />
+          ))}
+      </Box>
+    </Box>
   );
 };
 export default Buscador;
