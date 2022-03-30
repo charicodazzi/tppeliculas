@@ -33,12 +33,12 @@ const Buscador = () => {
         p: 5,
       }}
     >
-      <Box sx={{ color: "white", fontSize: 24 }}>Busca tu película</Box>
+      <Box sx={{ color: "white", fontSize: 20, p: 3 }}>Busca tu película</Box>
       <input
         type="text"
         onChange={handleChange}
         value={searchParams.get("query")}
-        style={{ width: 500 }}
+        style={{ width: 800, borderRadius: 10, height: 28 }}
       ></input>
       <Box sx={{ display: "flex" }}>
         {movies &&
