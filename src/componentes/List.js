@@ -25,15 +25,16 @@ const List = ({ titulo, url }) => {
         {" "}
       </Box>
       {titulo}
-
-      {movies.map((movie) => (
-        <PeliculaItem
-          key={movie.id}
-          titulo={movie.title}
-          imagen={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-          link={`/{${movie.id}`}
-        />
-      ))}
+      <Box sx={{ overflow: "scroll", height: "80vh" }}>
+        {movies.map((movie) => (
+          <PeliculaItem
+            key={movie.id}
+            titulo={movie.title}
+            imagen={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            link={`/{${movie.id}`}
+          />
+        ))}
+      </Box>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const Tarjeta = ({ imagen, titulo }) => {
   return (
@@ -13,25 +14,37 @@ const Tarjeta = ({ imagen, titulo }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        width: 250,
-        height: 450,
+        justifyContent: "space-between",
+        width: 300,
+        height: 600,
         m: 4,
       }}
     >
       <CardMedia
         component="img"
-        height="300"
+        height="400"
         image={imagen}
         alt={`Img-${titulo}`}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5">
+        <Typography
+          gutterBottom
+          variant="h5"
+          sx={{
+            width: 200,
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+            overflow: "hidden",
+            textAlign: "center",
+            fontWeight: 600,
+          }}
+        >
           {titulo}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton aria-label="Icono ver detalle">
+          <RemoveRedEyeIcon />
         </IconButton>
       </CardActions>
     </Card>
