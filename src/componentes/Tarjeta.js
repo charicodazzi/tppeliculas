@@ -15,8 +15,6 @@ const Tarjeta = ({ imagen, titulo }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        width: 300,
-        height: 600,
         m: 4,
       }}
     >

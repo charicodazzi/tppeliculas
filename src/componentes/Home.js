@@ -5,7 +5,7 @@ import Carrousel from "./Carrousel";
 
 const Home = () => {
   return (
-    <Box sx={{ bgcolor: "rgba(27,40,54,1.00)", color: "white" }}>
+    <Box sx={{ color: "white" }}>
       <Carrousel />
       <Box sx={{ display: "flex", justifyContent: "space-around", padding: 5 }}>
         <List titulo="Peliculas populares" url="popular" />

@@ -4,10 +4,12 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        bgcolor: "rgba(27, 40, 54, 1.0)",
         display: "flex",
         justifyContent: "center",
         fontSize: 22,
+        position: "absolute",
+        width: "100%",
+        bottom: 0,
       }}
     >
       <a

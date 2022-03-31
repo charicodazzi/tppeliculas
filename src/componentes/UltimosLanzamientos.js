@@ -12,11 +12,7 @@ const UltimosLanzamientos = () => {
       .then((data) => setMovies(data.results));
   }, []);
   return (
-    <Box
-      sx={{
-        bgcolor: "rgba(27,40,54,1.00)",
-      }}
-    >
+    <Box>
       <PresentacionPeliculas titulo="Ultimos lanzamientos" peliculas={movies} />
     </Box>
   );
