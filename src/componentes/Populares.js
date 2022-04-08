@@ -5,15 +5,32 @@ import Box from "@mui/material/Box";
 
 const Populares = () => {
   const [movies, setMovies] = useState([]);
+  const [pagina, setPagina] = useState(1);
 
   useEffect(() => {
-    fetch(`${URLBASE}popular?api_key=${APIkey}&language=es`)
+    fetch(`${URLBASE}popular?api_key=${APIkey}&language=es&page=${pagina}`)
       .then((res) => res.json())
-      .then((data) => setMovies(data.results));
-  }, []);
+      .then((data) => {
+        setMovies(data.results);
+      });
+  }, [pagina]);
+
+  const handleClickSiguiente = () => {
+    setPagina(pagina + 1);
+  };
+
+  const handleClickAnterior = () => {
+    setPagina(pagina - 1);
+  };
   return (
     <Box>
-      <PresentacionPeliculas titulo="Peliculas Populares" peliculas={movies} />
+      <PresentacionPeliculas
+        titulo="Peliculas Populares"
+        peliculas={movies}
+        clickBotonPagSiguiente={handleClickSiguiente}
+        clickBotonPagAnterior={handleClickAnterior}
+        pagina={pagina}
+      />
     </Box>
   );
 };

@@ -1,6 +1,17 @@
 import Tarjeta from "./Tarjeta";
 import { Box } from "@mui/material";
-const PresentacionPeliculas = ({ titulo, peliculas }) => {
+import { useState } from "react";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+
+const PresentacionPeliculas = ({
+  titulo,
+  peliculas,
+  clickBotonPagSiguiente,
+  clickBotonPagAnterior,
+  pagina,
+}) => {
   return (
     <Box
       sx={{
@@ -28,7 +39,20 @@ const PresentacionPeliculas = ({ titulo, peliculas }) => {
           </>
         ))}
       </Box>
-      <h3>Paginación</h3>
+      <IconButton
+        sx={{ m: 2, bgcolor: "white" }}
+        onClick={clickBotonPagAnterior}
+        disabled={pagina === 1}
+      >
+        <ArrowBackIosNewOutlinedIcon />
+      </IconButton>
+
+      <IconButton
+        sx={{ m: 2, bgcolor: "white" }}
+        onClick={clickBotonPagSiguiente}
+      >
+        <ArrowForwardIosOutlinedIcon sx={{ color: "white" }} />
+      </IconButton>
     </Box>
   );
 };
