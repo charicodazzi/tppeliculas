@@ -20,6 +20,7 @@ const Carrousel = () => {
           titulo={movie.title}
           imagen={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
           descripcion={movie.overview}
+          linkcarrousell={`/DetalleTarjeta/${movie.id}`}
         />
       ))}
     </Carousel>

@@ -6,8 +6,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import { Link } from "react-router-dom";
 
-const Tarjeta = ({ imagen, titulo }) => {
+const Tarjeta = ({ imagen, titulo, linkTarjeta }) => {
   return (
     <Card
       sx={{
@@ -41,9 +42,11 @@ const Tarjeta = ({ imagen, titulo }) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="Icono ver detalle">
-          <RemoveRedEyeIcon />
-        </IconButton>
+        <Link to={linkTarjeta}>
+          <IconButton aria-label="Icono ver detalle">
+            <RemoveRedEyeIcon />
+          </IconButton>
+        </Link>
       </CardActions>
     </Card>
   );

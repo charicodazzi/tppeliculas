@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import MenuItem from "@mui/material/MenuItem";
 
-const CarrousellItem = ({ titulo, imagen, descripcion }) => {
+const CarrousellItem = ({ titulo, imagen, descripcion, linkcarrousell }) => {
   return (
     <Box
       sx={{
@@ -38,12 +40,14 @@ const CarrousellItem = ({ titulo, imagen, descripcion }) => {
         <Typography sx={{ p: 2, textContent: "center" }} variant="body2">
           {descripcion}
         </Typography>
-        <Button
-          sx={{ bgcolor: "rgba(27,40,54,1.00)", mb: 2 }}
-          variant="contained"
-        >
-          Ver mas...{" "}
-        </Button>
+        <MenuItem component={Link} to={linkcarrousell}>
+          <Button
+            sx={{ bgcolor: "rgba(27,40,54,1.00)", mb: 2 }}
+            variant="contained"
+          >
+            Ver mas...{" "}
+          </Button>
+        </MenuItem>
       </Box>
     </Box>
   );

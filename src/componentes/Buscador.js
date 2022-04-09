@@ -46,6 +46,7 @@ const Buscador = () => {
             <Tarjeta
               titulo={movie.title}
               imagen={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+              linkTarjeta={`/DetalleTarjeta/${movie.id}`}
             />
           ))}
       </Box>

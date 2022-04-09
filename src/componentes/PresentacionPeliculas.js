@@ -11,6 +11,7 @@ const PresentacionPeliculas = ({
   clickBotonPagSiguiente,
   clickBotonPagAnterior,
   pagina,
+  linkTarjeta,
 }) => {
   return (
     <Box
@@ -35,10 +36,12 @@ const PresentacionPeliculas = ({
             <Tarjeta
               titulo={pelicula.title}
               imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+              linkTarjeta={`/DetalleTarjeta/${pelicula.id}`}
             />
           </>
         ))}
       </Box>
+
       <IconButton
         sx={{ m: 2, bgcolor: "white" }}
         onClick={clickBotonPagAnterior}
