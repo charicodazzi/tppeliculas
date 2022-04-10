@@ -15,7 +15,7 @@ const DetalleTarjeta = () => {
       .then((data) => {
         setPeliculaDetalle(data);
       });
-  }, [params.idPelicula]);
+  }, [params.idpelicula]);
 
   return (
     <Box
