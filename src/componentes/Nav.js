@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-
 import Button from "@mui/material/Button";
-
 import MovieIcon from "@mui/icons-material/Movie";
+import MenuMobile from "./MenuMobile";
 
 const Nav = () => {
   return (
@@ -19,39 +18,59 @@ const Nav = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
           ></MovieIcon>
-
-          <Button color="inherit">
-            <Link style={{ textDecoration: "none", color: "white" }} to="/">
-              Home
-            </Link>
-          </Button>
-          <Button color="inherit">
-            {" "}
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/UltimosLanzamientos"
-            >
-              Últimos Lanzamientos
-            </Link>
-          </Button>
-          <Button color="inherit">
-            {" "}
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/Populares"
-            >
-              Populares
-            </Link>
-          </Button>
-          <Button color="inherit">
-            {" "}
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/Buscador"
-            >
-              Buscador
-            </Link>
-          </Button>
+          <Box
+            sx={{
+              display: {
+                xs: "none",
+                sm: "none",
+                md: "inline",
+              },
+            }}
+          >
+            <Button color="inherit">
+              <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                Home
+              </Link>
+            </Button>
+            <Button color="inherit">
+              {" "}
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/UltimosLanzamientos"
+              >
+                Últimos Lanzamientos
+              </Link>
+            </Button>
+            <Button color="inherit">
+              {" "}
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/Populares"
+              >
+                Populares
+              </Link>
+            </Button>
+            <Button color="inherit">
+              {" "}
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/Buscador"
+              >
+                Buscador
+              </Link>
+            </Button>
+          </Box>
+          <Box
+            sx={{
+              display: {
+                xs: "inline",
+                sm: "inline",
+                md: "none",
+              },
+            }}
+          >
+            <MenuMobile />
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
