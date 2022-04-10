@@ -13,34 +13,36 @@ const List = ({ titulo, url }) => {
   }, []);
 
   return (
-    <div>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          mb: 6,
-          fontSize: 24,
-        }}
-      >
-        {titulo}
-      </Box>
+    <Box sx={{ display: "flex" }}>
+      <Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mb: 6,
+            fontSize: 24,
+          }}
+        >
+          {titulo}
+        </Box>
 
-      <Box
-        sx={{
-          overflow: "scroll",
-          height: "80vh",
-        }}
-      >
-        {movies.map((movie) => (
-          <PeliculaItem
-            key={movie.id}
-            titulo={movie.title}
-            imagen={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            linkItem={`/DetalleTarjeta/${movie.id}`}
-          />
-        ))}
+        <Box
+          sx={{
+            overflow: "scroll",
+            height: "80vh",
+          }}
+        >
+          {movies.map((movie) => (
+            <PeliculaItem
+              key={movie.id}
+              titulo={movie.title}
+              imagen={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              linkItem={`/DetalleTarjeta/${movie.id}`}
+            />
+          ))}
+        </Box>
       </Box>
-    </div>
+    </Box>
   );
 };
 
