@@ -17,7 +17,7 @@ const Footer = () => {
         style={{ textDecoration: "none", color: "white" }}
         href="https://www.linkedin.com/in/carla-codazzi/ "
       >
-        Visita mi Linkedin
+        Creado por Chari Codazzi - Visita mi Linkedin
       </a>
     </Box>
   );

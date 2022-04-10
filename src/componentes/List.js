@@ -25,7 +25,12 @@ const List = ({ titulo, url }) => {
         {titulo}
       </Box>
 
-      <Box sx={{ overflow: "scroll", height: "80vh" }}>
+      <Box
+        sx={{
+          overflow: "scroll",
+          height: "80vh",
+        }}
+      >
         {movies.map((movie) => (
           <PeliculaItem
             key={movie.id}

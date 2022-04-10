@@ -32,13 +32,21 @@ const DetalleTarjeta = () => {
       }}
     >
       <Box key={peliculaDetalle.id}>
-        <Box>
+        <Box sx={{ display: "flex", p: "2%" }}>
           <CardMedia
             sx={{ width: "300px", height: "400px" }}
             component="img"
             image={`https://image.tmdb.org/t/p/original/${peliculaDetalle.poster_path}`}
           ></CardMedia>
-          <Box sx={{ color: "white" }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              color: "white",
+              textAlign: "center",
+            }}
+          >
             <Typography>{peliculaDetalle.title}</Typography>
             <Typography>{peliculaDetalle.release_date}</Typography>
             <Typography>{peliculaDetalle.overview}</Typography>
