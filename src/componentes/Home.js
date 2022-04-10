@@ -1,8 +1,23 @@
+import List from "./List";
+import { Box } from "@mui/material";
+import Carrousel from "./Carrousel";
+
 const Home = () => {
   return (
-    <div>
-      <h2>Acá va el Home</h2>
-    </div>
+    <Box sx={{ color: "white" }}>
+      <Carrousel />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: 5,
+          flexWrap: "wrap",
+        }}
+      >
+        <List titulo="Peliculas populares" url="popular" />
+        <List titulo="Peliculas mejor puntuadas" url="top_rated" />
+      </Box>
+    </Box>
   );
 };
 

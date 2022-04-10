@@ -6,7 +6,7 @@ import UltimosLanzamientos from "./componentes/UltimosLanzamientos";
 import Populares from "./componentes/Populares";
 import Footer from "./componentes/Footer";
 import DetalleTarjeta from "./componentes/DetalleTarjeta";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (

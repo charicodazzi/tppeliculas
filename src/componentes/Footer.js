@@ -1,10 +1,25 @@
+import Box from "@mui/material/Box";
+
 const Footer = () => {
   return (
-    <div>
-      <a href="https://www.linkedin.com/in/carla-codazzi/">
-        Visita mi Linkedin
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        fontSize: 22,
+        position: "absolute",
+        width: "100%",
+        bottom: 0,
+        marginBottom: "2%",
+      }}
+    >
+      <a
+        style={{ textDecoration: "none", color: "white" }}
+        href="https://www.linkedin.com/in/carla-codazzi/ "
+      >
+        Creado por Chari Codazzi - Visita mi Linkedin
       </a>
-    </div>
+    </Box>
   );
 };
 export default Footer;
