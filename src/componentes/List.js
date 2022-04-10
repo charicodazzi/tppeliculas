@@ -10,7 +10,7 @@ const List = ({ titulo, url }) => {
     fetch(`${URLBASE}${url}?api_key=${APIkey}&language=es`)
       .then((res) => res.json())
       .then((data) => setMovies(data.results));
-  }, []);
+  }, [movies]);
 
   return (
     <Box sx={{ display: "flex" }}>
