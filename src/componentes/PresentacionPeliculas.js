@@ -1,6 +1,5 @@
 import Tarjeta from "./Tarjeta";
 import { Box } from "@mui/material";
-import { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
@@ -22,7 +21,14 @@ const PresentacionPeliculas = ({
         flexWrap: "wrap",
       }}
     >
-      <Box sx={{ color: "white", fontSize: 30 }}>{titulo}</Box>
+      <Box
+        sx={{
+          color: "white",
+          fontSize: 30,
+        }}
+      >
+        {titulo}
+      </Box>
       <Box
         sx={{
           marginTop: 5,

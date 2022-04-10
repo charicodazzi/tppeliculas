@@ -22,9 +22,9 @@ const List = ({ titulo, url }) => {
           fontSize: 24,
         }}
       >
-        {" "}
+        {titulo}
       </Box>
-      {titulo}
+
       <Box sx={{ overflow: "scroll", height: "80vh" }}>
         {movies.map((movie) => (
           <PeliculaItem
