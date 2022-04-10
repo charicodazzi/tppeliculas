@@ -10,7 +10,6 @@ const PresentacionPeliculas = ({
   clickBotonPagSiguiente,
   clickBotonPagAnterior,
   pagina,
-  linkTarjeta,
 }) => {
   return (
     <Box
@@ -25,6 +24,7 @@ const PresentacionPeliculas = ({
         sx={{
           color: "white",
           fontSize: 30,
+          marginTop: "2%",
         }}
       >
         {titulo}
@@ -47,21 +47,22 @@ const PresentacionPeliculas = ({
           </>
         ))}
       </Box>
+      <Box sx={{ display: "flex" }}>
+        <IconButton
+          sx={{ m: 2, bgcolor: "white" }}
+          onClick={clickBotonPagAnterior}
+          disabled={pagina === 1}
+        >
+          <ArrowBackIosNewOutlinedIcon />
+        </IconButton>
 
-      <IconButton
-        sx={{ m: 2, bgcolor: "white" }}
-        onClick={clickBotonPagAnterior}
-        disabled={pagina === 1}
-      >
-        <ArrowBackIosNewOutlinedIcon />
-      </IconButton>
-
-      <IconButton
-        sx={{ m: 2, bgcolor: "white" }}
-        onClick={clickBotonPagSiguiente}
-      >
-        <ArrowForwardIosOutlinedIcon sx={{ color: "white" }} />
-      </IconButton>
+        <IconButton
+          sx={{ m: 2, bgcolor: "white" }}
+          onClick={clickBotonPagSiguiente}
+        >
+          <ArrowForwardIosOutlinedIcon sx={{ color: "white" }} />
+        </IconButton>
+      </Box>
     </Box>
   );
 };

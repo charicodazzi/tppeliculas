@@ -10,6 +10,7 @@ const Footer = () => {
         position: "absolute",
         width: "100%",
         bottom: 0,
+        marginBottom: "2%",
       }}
     >
       <a
