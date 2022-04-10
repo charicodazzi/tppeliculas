@@ -38,9 +38,9 @@ const Buscador = () => {
         type="text"
         onChange={handleChange}
         value={searchParams.get("query")}
-        style={{ width: 800, borderRadius: 10, height: 28 }}
+        style={{ width: 400, borderRadius: 10, height: 28 }}
       ></input>
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
         {movies &&
           movies.map((movie) => (
             <Tarjeta

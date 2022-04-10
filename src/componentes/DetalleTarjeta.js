@@ -31,7 +31,7 @@ const DetalleTarjeta = () => {
       }}
     >
       <Box key={peliculaDetalle.id}>
-        <Box sx={{ display: "flex", p: "2%" }}>
+        <Box sx={{ display: "flex", p: "2%", justifyContent: "center" }}>
           <CardMedia
             sx={{ width: "300px", height: "400px" }}
             component="img"
@@ -44,6 +44,10 @@ const DetalleTarjeta = () => {
               justifyContent: "center",
               color: "white",
               textAlign: "center",
+              bgcolor: "#232323",
+              opacity: 0.8,
+              width: "50%",
+              ml: 2,
             }}
           >
             <Typography>{peliculaDetalle.title}</Typography>

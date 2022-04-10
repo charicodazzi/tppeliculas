@@ -2,7 +2,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
@@ -22,6 +21,7 @@ const Tarjeta = ({ imagen, titulo, linkTarjeta }) => {
       <CardMedia
         component="img"
         height="400"
+        width="100%"
         image={imagen}
         alt={`Img-${titulo}`}
       />
