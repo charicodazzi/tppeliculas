@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 
+// usa camelCase: la prop deberia llamarse linkCarrousell
 const CarrousellItem = ({ titulo, imagen, descripcion, linkcarrousell }) => {
   return (
     <Box
