@@ -46,6 +46,7 @@ const Buscador = () => {
             <Tarjeta
               titulo={movie.title}
               imagen={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+              // es preferible no poner mayusculas en las rutas
               linkTarjeta={`/DetalleTarjeta/${movie.id}`}
             />
           ))}
